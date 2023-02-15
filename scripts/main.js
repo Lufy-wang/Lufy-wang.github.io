@@ -3,10 +3,10 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');
-  if (mySrc === 'images/firefox-icon.png') {
-    myImage.setAttribute ('src','images/firefox2.png');
+  if (mySrc === '../images/firefox-icon.png') {
+    myImage.setAttribute ('src','../images/firefox2.png');
   } else {
-    myImage.setAttribute ('src','images/firefox-icon.png');
+    myImage.setAttribute ('src','../images/firefox-icon.png');
   }
 };
 
@@ -22,7 +22,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Mozilla 酷毙了，' + myName;
+    myHeading.textContent = 'Mozilla 酷毙了，' + myName;
   }
 }
 
@@ -37,4 +37,4 @@ if (!localStorage.getItem('name')) {
 // 为按钮设置 onclick 事件处理器：
 myButton.onclick = function() {
   setUserName();
-};
+}
